@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 21 2023 г., 12:13
+-- Время создания: Дек 21 2023 г., 12:33
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -56,6 +56,13 @@ CREATE TABLE `news` (
   `content` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Дамп данных таблицы `news`
+--
+
+INSERT INTO `news` (`id`, `title`, `content`) VALUES
+(1, 'Максим', 'Лучший студент');
+
 -- --------------------------------------------------------
 
 --
@@ -88,6 +95,12 @@ ALTER TABLE `assignments`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -103,6 +116,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `assignments`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT для таблицы `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
